@@ -19,7 +19,7 @@
     }
 
     $posicao = 0;
-    $menor = 10000000;
+    $menor = $vetor[1];
     //var_dump($vetor)
     foreach($vetor as $chave => $valor){
         echo "Posição do Vetor: $chave e seu valor é $valor";
