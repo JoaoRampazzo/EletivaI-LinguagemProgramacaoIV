@@ -11,11 +11,21 @@
   <body class="container">
     <h1>exercicio2</h1>
 
-    <form action="respostaExercicio2.php" method="POST">
-        <div class="row">
-            <div class="col">
-                <label for="nome" class="label-control">nome</label>
-                <input type="text" class="form-control" id="nome" name="nome"/>
-            </div>
-        </div>
-    </form>
+    <?php
+    for ($i=1; $i<=10; $i++){
+        $vetor[$i] = $_POST["nome$i"];
+    }
+    function ordenar($vetor){
+        sort($vetor);
+        foreach($vetor as $nome){
+            echo "$nome";
+            echo "<br>";
+        }
+    }
+    ordenar($vetor);
+    //var_dump($vetor)
+    ?>
+
+
+  </body>
+</html>  
