@@ -11,6 +11,35 @@
   </head>
   <body>
     <h1>Cookies</h1>
+    <?php
+
+        if ($_POST){
+            $email = $_POST['email'];
+            $senha = $_POST['senha'];
+            /*setcookie("usuario", $email, time() + (86400 * 1), "/");
+            echo "Seja bem vindo ".$_COOKIE['usuario']; */
+
+            session_start();
+            if (($email == "v@v.com") && ($senha == "123")){
+                $_SESSION['usuario'] = $email;
+                $_SESSION['acesso'] = true;
+                echo "Bem vindo usuário ".$_SESSION['usuario'];
+                echo "<br>";
+                echo '<a href="sair.php">Sair</a>';
+            } else{
+                header('location: index.php');
+                exit;
+            }
+        } else {
+            session_start();
+            if ($_SESSION['acesso'] == true){
+                echo "Seja bem vindo usuario ".$_SESSION['usuario'];
+                echo "<br>";
+                echo '<a href="sair.php"> Sair</a>';
+            }
+        }
+        
+    ?>
     
 
     
