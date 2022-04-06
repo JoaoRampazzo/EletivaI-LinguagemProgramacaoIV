@@ -15,7 +15,7 @@
     <form action="resultado.php" method="post">
         <div class="row">
             <?php
-            for ($i=1; $i<=10; $i++){
+            for ($i=1; $i<=20; $i++){
             ?>
             <div class="col">
                 <label for="valor<?= $i ?>" class="label-control">
