@@ -14,21 +14,12 @@
     <h1>Cáculos!</h1>
 
     <?php
-      $valor1 = $_POST['valor1'];
-      $valor2 = $_POST['valor2'];
-      echo "Valor1 é: $valor1<br/>
-      e Valor 2 é: $valor2 <br/>";
-
-      echo "Soma: ".($valor1 + $valor2);
-      echo "Subtração: ".($valor1 - $valor2);
-      echo "Multiplicação ".($valor1 * $valor2);
-      if ($valor2 != 0){
-        echo "Divisão: "($valor1 / $valor2);
-      } else{
-        echo "Não é possivel realizar a divisão por 0";
-      }
-      if ($valor1 % 2 == 0)
-      echo "Valor 1 é par!";
+       $valor1 = $_POST['valor1'];
+       $valor2 = $_POST['valor2'];
+       echo "O valor dado é: $valor1<br/>
+       e o valor do produto é: $valor2 <br/>";
+ 
+       echo "O valor do troco é: ".($valor1 - $valor2);
     ?>  
 
 

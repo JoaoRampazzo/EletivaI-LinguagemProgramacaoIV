@@ -15,7 +15,7 @@
         <div class="row">
             <div class="col">
               <label for="valor1" class="label-control">
-                Informe o valor 1:
+                Informe o valor pago:
               </label>
               <input type="number" name="valor1"
                 id ="valor1" class="form-control"/>
@@ -23,7 +23,7 @@
 
             <div class="col">
             <label for="valor2" class="label-control">
-                Informe o valor 2:
+                Informe o preço do produto:
               </label>
               <input type="number" name="valor2"
                   id="valor2" class="form-control"/>
