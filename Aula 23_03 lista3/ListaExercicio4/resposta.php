@@ -14,13 +14,26 @@
     <h1>Resposta exercício 4</h1>
     
     <?php
-    for ($i=1; $i<=10; $i++){
-        $vetor[$i] = $_POST["valor$i"]; 
+
+    $valor = 0;
+    function soma($valor){
+      $soma = 0;
+      for ($i = 1; $i < $valor; $i++){
+        if ($valor % $i == 0){
+          $soma += $i;
+        }
+      }
+      return $soma;
     }
+    for ($i=1; $i<=5; $i++){
+        $vetor[$i] = $_POST["valor$i"];
+        echo soma($vetor[$i]);
+        echo "<br>";
+
+    }
+
     
-    if ($valor = $valor);{
-        echo $valor = "-";
-    }
+  
     
 
     ?>
