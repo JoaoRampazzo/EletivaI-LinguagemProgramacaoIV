@@ -1,0 +1,16 @@
+{
+    "name": "aluno/projeto-php",
+    "description": "Este é um exemplo de projeto usando php",
+    "autoload": {
+        "psr-4": {
+            "Aluno\\ProjetoPhp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "JoaoRampazzo",
+            "email": "99516140+JoaoRampazzo@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}
