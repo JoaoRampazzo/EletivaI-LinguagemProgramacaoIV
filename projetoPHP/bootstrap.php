@@ -1,4 +1,4 @@
-<?
+<?php
     require_once __DIR__.'/vendor/autoload.php';
     //Aqui a gente recupera o que o usuário digitou e qual
     //métodos HTTP ele utilizou
@@ -18,8 +18,8 @@
 
     $router->post('/exemplo-resultado', 'Aluno\ProjetoPHP\Controller\ExercicioController::exibirResultado');
 
-    $router->get('/cliente/novo', 'Aluno\ProjetoPHP\Controller\ClientesController::abrirFromularioInserir');
-    
+    $router->get('/cliente/novo', 'Aluno\ProjetoPhp\Controller\ClientesController::abrirFormularioInserir');
+
     $router->post('cliente/inserir', 'Aluno\ProjetoPHP\Controller\ClientesController::inserirCliente');
     //ADICIONAR AS ROTAS VÁLIDAS ACIMA
 
