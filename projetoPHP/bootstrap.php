@@ -14,12 +14,15 @@
         return "Olá Mundo!";
     });
 
+    $router->get('/exemplo', 'Aluno\ProjetoPHP\Controller\ExercicioController::exibir');
 
-
+    $router->post('/exemplo-resultado', 'Aluno\ProjetoPHP\Controller\ExercicioController::exibirResultado');
 
     $router->get('/cliente/novo', 'Aluno\ProjetoPHP\Controller\ClientesController::abrirFromularioInserir');
+    
     $router->post('cliente/inserir', 'Aluno\ProjetoPHP\Controller\ClientesController::inserirCliente');
     //ADICIONAR AS ROTAS VÁLIDAS ACIMA
+
     $result = $router->handler();
 
     if(!$result){
