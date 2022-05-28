@@ -1,34 +1,44 @@
 <?php
-    require_once __DIR__.'/vendor/autoload.php';
-    //Aqui a gente recupera o que o usuário digitou e qual
-    //métodos HTTP ele utilizou
-    $method = $_SERVER['REQUEST_METHOD'];
-    $path = $_SERVER['PATH_INFO'];
 
-    //Instanciar classe Router
-    $router = new \Aluno\ProjetoPhp\Router($method, $path);
+require_once __DIR__.'/vendor/autoload.php';
 
-    //ADICIONAR AS ROTAS VÁLIDAS ABAIXO
+//Aqui a gente recupera o que o usuário digitou e qual 
+//método HTTP ele utilizou
+$method = $_SERVER['REQUEST_METHOD'];
+$path = $_SERVER['PATH_INFO'];
 
-    $router->get('/ola-mundo', function(){
-        return "Olá Mundo!";
-    });
+//Instanciar classe Router
+$router = new \Aluno\ProjetoPhp\Router($method, $path);
 
-    $router->get('/exemplo', 'Aluno\ProjetoPHP\Controller\ExercicioController::exibir');
+//ADICIONAR AS ROTAS VÁLIDAS ABAIXO
 
-    $router->post('/exemplo-resultado', 'Aluno\ProjetoPHP\Controller\ExercicioController::exibirResultado');
+$router->get('/ola-mundo', function(){
+    return "Olá Mundo!";
+});
 
-    $router->get('/cliente/novo', 'Aluno\ProjetoPhp\Controller\ClientesController::abrirFormularioInserir');
+$router->get('/exemplo', 
+        'Aluno\ProjetoPhp\Controller\ExercicioController::exibir');
 
-    $router->post('cliente/inserir', 'Aluno\ProjetoPHP\Controller\ClientesController::inserirCliente');
-    //ADICIONAR AS ROTAS VÁLIDAS ACIMA
+$router->post('/exemplo-resultado',
+        'Aluno\ProjetoPhp\Controller\ExercicioController::exibirResultado');
 
-    $result = $router->handler();
+$router->get('/cliente/novo',
+'Aluno\ProjetoPhp\Controller\ClientesController::abrirFormularioInserir');
 
-    if(!$result){
-        http_response_code(404);
-        echo "Página não encontrada";
-        die();
-    }
-    echo $result($router->getParams());
-?>
+$router->post('/cliente/inserir',
+'Aluno\ProjetoPhp\Controller\ClientesController::inserirCliente');
+
+$router->get('/clientes',
+'Aluno\ProjetoPhp\Controller\ClientesController::abrirListaClientes');
+
+//ADICIONAR AS ROTAS VÁLIDAS ACIMA
+
+$result = $router->handler();
+
+if (!$result){
+    http_response_code(404);
+    echo "Página não encontrada";
+    die();
+}
+
+echo $result($router->getParams());
