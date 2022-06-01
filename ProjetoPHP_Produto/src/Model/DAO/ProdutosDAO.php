@@ -8,7 +8,7 @@ class ProdutosDAO{
 
     public function inserir(Produtos $c){
         try{
-            $sql = "INSERT INTO `clientes`(`descricao`, `nome`, `valor`) VALUES (:descricao, :nome, :valor)";
+            $sql = "INSERT INTO `produtos`(`descricao`, `nome`, `valor`) VALUES (:descricao, :nome, :valor)";
             $p = Conexao::conectar()->prepare($sql);
             $p->bindValue(":descricao", $c->getDescricao());
             $p->bindValue(":nome", $c->getNome());

@@ -8,7 +8,7 @@ class Conexao{
 
     public static function conectar(){
         return 
-        new PDO("mysql:host=localhost; dbname=projetophp",
+        new PDO("mysql:host=localhost; dbname=projetophpproduto",
                     "root",
                     "");
     }

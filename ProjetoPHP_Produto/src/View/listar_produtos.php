@@ -38,7 +38,7 @@
                 <tr>
                 <th scope="col">#</th>
                 <th scope="col">nome</th>
-                <th scope="col">descricao</th>
+                <th scope="col">valor</th>
                 <th scope="col">ações</th>
                 </tr>
             </thead>
@@ -48,7 +48,7 @@
                     <tr>
                     <th scope="row">1<?=$linha['id']?></th>
                     <td><?=$linha['nome']?></td>
-                    <td><?=$linha['descricao']?></td>
+                    <td><?=$linha['valor']?></td>
                     <td><a href="/produto/alterar/<?=$linha['id'] ?>" class="btn btn-warning">Alterar</a>
                     <a href="/produto/excluir/<?=$linha['id'] ?>" class="btn btn-danger">Excluir</a></td>
                 </tr>

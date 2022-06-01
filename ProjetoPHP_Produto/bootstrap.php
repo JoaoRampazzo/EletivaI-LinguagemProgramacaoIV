@@ -32,7 +32,7 @@ $router->post('/produto/editar/{id}',
 'Aluno\ProjetoPhp\Controller\ProdutosController::editarProduto');
 
 $router->get('/produto/excluir/{id}',
-'Aluno\ProjetoPhp\Controller\ProdutossController::excluirProduto');
+'Aluno\ProjetoPhp\Controller\ProdutosController::excluirProduto');
 
 
 
