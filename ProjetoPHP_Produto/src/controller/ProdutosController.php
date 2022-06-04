@@ -54,7 +54,7 @@ class ProdutosController{
         ControllerProdutosController::abrirListaProdutos();
     }
 
-    public static function excluirProdutos($params){
+    public static function excluirProduto($params){
         $dao = new ProdutosDAO();
         if ($dao->excluir($params[1])){
             $resposta = true;

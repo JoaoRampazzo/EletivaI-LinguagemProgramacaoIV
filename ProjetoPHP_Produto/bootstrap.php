@@ -35,6 +35,11 @@ $router->get('/produto/excluir/{id}',
 'Aluno\ProjetoPhp\Controller\ProdutosController::excluirProduto');
 
 
+$router->get('/exerc1', 
+'Aluno\ProjetoPhp\Controller\exerc1Controller::exibir');
+
+$router->post('/exerc1View-resultado',
+'Aluno\ProjetoPhp\Controller\exerc1Controller::exibirResultado');
 
 //ADICIONAR AS ROTAS VÁLIDAS ACIMA
 
