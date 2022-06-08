@@ -34,12 +34,26 @@ $router->post('/produto/editar/{id}',
 $router->get('/produto/excluir/{id}',
 'Aluno\ProjetoPhp\Controller\ProdutosController::excluirProduto');
 
-
+//ROTAS LISTA 1 ABAIXO
 $router->get('/exerc1', 
 'Aluno\ProjetoPhp\Controller\exerc1Controller::exibir');
 
 $router->post('/exerc1View-resultado',
 'Aluno\ProjetoPhp\Controller\exerc1Controller::exibirResultado');
+
+$router->get('/exerc2', 
+'Aluno\ProjetoPhp\Controller\exerc2Controller::exibir');
+
+$router->post('/exerc2View-resultado',
+'Aluno\ProjetoPhp\Controller\exerc2Controller::exibirResultado');
+
+$router->get('/exerc3', 
+'Aluno\ProjetoPhp\Controller\exerc3Controller::exibir');
+
+$router->post('/exerc3View-resultado',
+'Aluno\ProjetoPhp\Controller\exerc3Controller::exibirResultado');
+
+//ROTAS LISTA 1 ACIMA
 
 //ADICIONAR AS ROTAS VÁLIDAS ACIMA
 
