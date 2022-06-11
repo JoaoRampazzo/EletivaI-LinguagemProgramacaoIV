@@ -53,6 +53,12 @@ $router->get('/exerc3',
 $router->post('/exerc3View-resultado',
 'Aluno\ProjetoPhp\Controller\exerc3Controller::exibirResultado');
 
+$router->get('/exerc4', 
+'Aluno\ProjetoPhp\Controller\exerc4Controller::exibir');
+
+$router->post('/exerc4View-resultado',
+'Aluno\ProjetoPhp\Controller\exerc4Controller::exibirResultado');
+
 //ROTAS LISTA 1 ACIMA
 
 //ADICIONAR AS ROTAS VÁLIDAS ACIMA
